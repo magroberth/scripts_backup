@@ -1,0 +1,7 @@
+TARGETS = openerp hwclock.sh urandom sendsigs umountnfs.sh umountfs umountroot halt reboot
+sendsigs: openerp
+umountnfs.sh: sendsigs openerp
+umountfs: hwclock.sh urandom umountnfs.sh openerp
+umountroot: umountfs
+halt: umountroot
+reboot: umountroot

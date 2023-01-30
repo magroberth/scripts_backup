@@ -1,0 +1,14 @@
+apiVersion: v1
+data:
+  backup_db: "true"
+  backup_db_engine: "postgres"
+  backup_db_retention: "10"
+  backup_name_filter: ""
+  backup_filestore: "true"
+  backup_filestore_retention: "5"
+kind: ConfigMap
+metadata:
+  labels:
+    app: odoo-plantilla-test
+  name: config-backup-plantilla-test
+  namespace: plantilla-test

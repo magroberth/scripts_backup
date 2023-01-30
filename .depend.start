@@ -1,0 +1,5 @@
+TARGETS = bootlogs killprocs motd openerp single rmnologin rc.local
+INTERACTIVE =
+single: killprocs bootlogs motd
+rmnologin: bootlogs motd openerp
+rc.local: bootlogs motd openerp
